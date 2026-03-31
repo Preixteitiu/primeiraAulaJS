@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Pictures/test/array"
+		},
+		{
+			"path": "../../Pictures/test/case"
+		},
+		{
+			"path": "../../Pictures/test/funções JS"
+		},
+		{
+			"path": "../../Pictures/test/funçõesRepetição"
+		},
+		{
+			"path": "../../Pictures/test/If e else"
+		},
+		{
+			"path": "../../Pictures/test/node_modules"
+		},
+		{
+			"path": "../../Pictures/test/objetos"
+		},
+		{
+			"path": "../../Pictures/test/operadores logicos"
+		},
+		{
+			"path": "../../Pictures/test/sistemaCafeteria.js"
+		}
+	],
+	"settings": {}
+}
