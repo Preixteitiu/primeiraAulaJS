@@ -12,12 +12,16 @@ class Biblioteca {
   }
 
   adicionarLivros(titulo) {
-    this.livros.push(titulo);
-    console.log(`O item ${titulo.nome} foi adicionado`);
+    if (!titulo.nome || !titulo.autor) {
+      console.log(`Escreva o autor e o titulo do livro`);
+    } else {
+      this.livros.push(titulo);
+      console.log(`O item ${titulo.nome} foi adicionado`);
+    }
   }
 
   listarLivros() {
-    return this.livros.length
+    return this.livros.length;
   }
 
   seDisponivel(titulo) {
@@ -28,18 +32,18 @@ class Biblioteca {
     }
   }
 
-  emprestarLivros(titulo){
-    this.livros.pop()
-    const emLeitura = !this.disponivel
-    console.log(`O item ${titulo.nome} foi emprestado com sucesso`)
-    return emLeitura
-    }
+  emprestarLivros(titulo) {
+    const emLeitura = !this.disponivel;
+    console.log(`O item ${titulo.nome} foi emprestado com sucesso`);
+    this.livros.pop();
+    return emLeitura;
+  }
 }
 
-const livro1 = new Livro(`Piratas do Caribe`, `Jack Sparrow`);
+const livro1 = new Livro(`Piratas do Caribe`, 'Autor' );
 
 const prateleira = new Biblioteca(`SEBO`);
 
 prateleira.adicionarLivros(livro1);
-prateleira.seDisponivel(livro1);
-prateleira.listarLivros()
+// prateleira.seDisponivel(livro1);
+// prateleira.listarLivros();
