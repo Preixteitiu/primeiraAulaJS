@@ -29,34 +29,34 @@ class Biblioteca {
   }
 
   listarLivros() {
-    if (this.livros.length < 0)
-      console.log(`Não esitem livros na bilbioteca`)
-      else {
-      console.log(this.livros.length)
-      return this.livros.length}
-  }
-
+    if (this.livros.length > 0) {
+      this.livros.forEach((livro, index) => {
+        console.log(`${index + 1}. ${livro.nome} - ${livro.autor}`)
+        }
+          )
+            }
+          }
   emprestarLivros(titulo) {
-    let emprestado = (this.disponivel);
-    if (!emprestado)
-      console.log(`O ${titulo.nome} já está em uso`)
-    else{
-      console.log(`O ${titulo.nome} foi emprestado com sucesso`)
+    let emprestimo = titulo.disponivel;
+    if (emprestimo) {
+      console.log(`O ${titulo.nome} foi emprestado com sucesso`);
+      !emprestimo;
+    } else {
+      console.log(`${titulo.nome} não está disponível`);
     }
-    return !emprestado
   }
 
   devolverLivros(titulo) {
-    let emprestado = !(this.disponivel)
-      console.log(`O item ${titulo.nome} foi devolvido com sucesso`)
-    return{
-      emprestado
-    }  
+    let emprestado = !titulo.disponivel;
+    if (emprestado) {
+      console.log(`O item ${titulo.nome} foi devolvido com sucesso`);
+      !emprestado;
+    }
   }
 }
 
-const livro1 = new Livro(`Piratas do Caribe`, 'Autor' );
-const livro2 = new Livro (`Dune`, `capeta` )
+const livro1 = new Livro(`Piratas do Caribe`, "Autor");
+const livro2 = new Livro(`Dune`, `capeta`);
 
 const prateleira = new Biblioteca(`SEBO`);
 
@@ -65,7 +65,8 @@ prateleira.adicionarLivros(livro2);
 prateleira.seDisponivel(livro1);
 prateleira.seDisponivel(livro2);
 
-prateleira.listarLivros()
-prateleira.emprestarLivros(livro2)
+prateleira.listarLivros();
+prateleira.emprestarLivros(livro2);
 prateleira.seDisponivel(livro2);
-prateleira.devolverLivros(livro2)
+prateleira.devolverLivros(livro2);
+prateleira.listarLivros();
